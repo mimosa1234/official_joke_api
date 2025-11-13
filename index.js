@@ -24,11 +24,9 @@ app.get('/random_joke', (req, res) => {
 });
 
 app.get('/jokes/count', (req, res) => {
-  const general = require('./jokes/general.json');
-  const programming = require('./jokes/programming.json');
-  const knockknock = require('./jokes/knock-knock.json');
+  const jokes = require('./jokes/index.json');
 
-  const total = general.length + programming.length + knockknock.length;
+  const total = jokes.length;
 
   res.json({ count: total });
 });
