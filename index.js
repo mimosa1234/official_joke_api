@@ -23,8 +23,14 @@ app.get('/random_joke', (req, res) => {
   res.json(randomJoke());
 });
 
-app.get('/random_ten', (req, res) => {
-  res.json(randomTen());
+app.get('/jokes/count', (req, res) => {
+  const general = require('./jokes/general.json');
+  const programming = require('./jokes/programming.json');
+  const knockknock = require('./jokes/knock-knock.json');
+
+  const total = general.length + programming.length + knockknock.length;
+
+  res.json({ count: total });
 });
 
 app.get('/jokes/random', (req, res) => {
