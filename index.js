@@ -12,7 +12,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('Tervetuloa Mimosa API:in! Käytettävissä olevia endpointteja: /jokes/random, /jokes/count');
+  res.send('Tervetuloa Mimosa API:in! Käytettävissä olevia endpointteja: /jokes/random, /jokes_ten, /jokes/count');
 });
 
 
